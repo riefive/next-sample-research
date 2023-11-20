@@ -21,6 +21,9 @@ export default function Main() {
         <li>
           <Link href='/dashboard-simple'>Dashboard Simple</Link>
         </li>
+        <li>
+          <Link href='/something-wrong'>Something Wrong</Link>
+        </li>
       </ul>
       <div className='App'>
         <Button type='primary'>Button</Button>
