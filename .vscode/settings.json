@@ -1,5 +1,7 @@
 {
   "files.associations": {
-    "plyconfig.json": "jsonc"
-  }
+    "plyconfig.json": "jsonc",
+    "*.css": "tailwindcss"
+  },
+  "css.lint.unknownAtRules": "ignore"
 }
