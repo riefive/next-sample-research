@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { ConfigProvider } from 'antd';
+import StyleAntDRegister from '@/components/basics/style.antd';
+import ThemeDefault from '@/components/themes/theme.default';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -16,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ConfigProvider theme={ThemeDefault}>
+          <StyleAntDRegister>{children}</StyleAntDRegister>
+        </ConfigProvider>
+      </body>
     </html>
   );
 }

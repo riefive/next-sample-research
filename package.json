@@ -11,6 +11,8 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@ant-design/cssinjs": "^1.18.0-alpha.0",
+    "antd": "^5.11.2",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
