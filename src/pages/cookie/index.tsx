@@ -1,10 +1,15 @@
 import cookie from 'js-cookie';
+import { GetServerSideProps } from 'next';
 
-export function getServerSideProps() {
-  return { props: {} };
-}
+export const getServerSideProps: GetServerSideProps<{}> = async (
+  context: any
+) => {
+  const req = context.req || {};
+  console.log(context.res);
+  return { props: { token: req?.cookies?.token || '' } };
+};
 
-export default function CookiePage() {
+export default function CookiePage(props: { token: any }) {
   const isClient = false;
   const onAdd = () => {
     if (isClient) {
@@ -35,6 +40,7 @@ export default function CookiePage() {
   return (
     <main>
       <h1>Cookies</h1>
+      <h2>Token: {props.token}</h2>
       <button type='button' onClick={() => onAdd()}>
         Login
       </button>{' '}
