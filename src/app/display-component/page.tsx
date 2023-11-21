@@ -1,6 +1,15 @@
 'use client';
 import React from 'react';
-import { Pagination, Skeleton, Space, Spin } from 'antd';
+import {
+  Flex,
+  Col,
+  Row,
+  Button,
+  Pagination,
+  Skeleton,
+  Space,
+  Spin,
+} from 'antd';
 import type { PaginationProps } from 'antd';
 
 const onShowSizeChange: PaginationProps['onShowSizeChange'] = (
@@ -43,6 +52,20 @@ const DisplayComponentPage = () => {
         defaultCurrent={3}
         total={500}
       />
+      <Flex wrap='wrap' gap='medium'>
+        {Array.from({ length: 24 }, (_, i) => (
+          <Button key={i} type='primary'>
+            Button
+          </Button>
+        ))}
+      </Flex>
+      <Row>
+        <Col span={24}>col</Col>
+      </Row>
+      <Row>
+        <Col span={12}>col-12</Col>
+        <Col span={12}>col-12</Col>
+      </Row>
     </div>
   );
 };
