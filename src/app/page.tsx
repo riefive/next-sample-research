@@ -16,6 +16,9 @@ export default function Main() {
           <Link href='/sample'>Sample</Link>
         </li>
         <li>
+          <Link href='/cookie'>Sample Cookie</Link>
+        </li>
+        <li>
           <Link href='/dashboard'>Dashboard</Link>
         </li>
         <li>
